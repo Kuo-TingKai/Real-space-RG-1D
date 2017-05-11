@@ -44,8 +44,6 @@ def initialize_hamiltonian(h, h_help):
     return H
 
 def construct_new_hamiltonian(H, s1, s2):
-    dim = H.shape[0]
-    id_matrix = np.eye(dim)
     result = - np.kron(s1, s2)
     result += construct_two_copies(H)
     return result
